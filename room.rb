@@ -7,7 +7,7 @@ def initialize(theme)
 @theme = theme
 @number_of_guests = []
 @playlist = []
-@till = 0
+#@till = 0
 @entrance_fee = 2
 end
 
@@ -35,18 +35,16 @@ def room_capacity
   end
 end
 
-def money_in_till
-  return till
-end
 
-def add_money_till(room)
-  @till += room.entrance_fee
-end
 
 def entrance_fees
   @guest1.pay_entrance_fee
   add_money_till(@room1)
 end
+
+# I had a problem here with converting @playlist to array of hashes. Would like to see a solution for:
+#for song in @playlist
+#    if song[:title] == guest.favourite_song ---> this was throwing an error undefined method for song
 
 def play_fav_song(guest)
     if @playlist.include?(guest.favourite_song)
