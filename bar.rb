@@ -22,7 +22,10 @@ end
 
 def sell_snack
   @snacks[:crisps][:amount] -= 1
-  @till += snacks[:crisps][:price]
+end
+
+def add_money_snacks
+  return @till += @snacks[:crisps][:price]
 end
 
 end

@@ -22,11 +22,12 @@ class TestBar < MiniTest::Test
   end
 
 def test_sell_snack
-
-    assert_equal(2,@bar.money_in_till)
     assert_equal(9, @bar.sell_snack)
 end
 
+def test_add_money_snacks
+  assert_equal(2, @bar.add_money_snacks)
+end
 
 
 
