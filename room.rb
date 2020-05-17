@@ -1,3 +1,5 @@
+require('pry')
+
 class Room
   attr_reader :theme, :entrance_fee
   attr_accessor :number_of_guests, :playlist, :till
@@ -45,6 +47,13 @@ def entrance_fees
   @guest1.pay_entrance_fee
   add_money_till(@room1)
 end
+
+def play_fav_song(guest)
+    if @playlist.include?(guest.favourite_song)
+    return "Whoo!"
+    end
+end
+
 
 
 end
