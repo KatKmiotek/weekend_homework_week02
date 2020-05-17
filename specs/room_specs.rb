@@ -8,8 +8,8 @@ class TestRoom < MiniTest::Test
   def setup()
     @room1 = Room.new("The best of Britney")
     @room2 = Room.new("The best of Death by Audio")
-    @guest1 = Guest.new("Paul", 20, "Toxic")
-    @guest2 = Guest.new("Sue", 50, "My heart will go on")
+    @guest1 = Guest.new("Paul", 20, @song1)
+    @guest2 = Guest.new("Sue", 50, @song2)
     @song1 = Song.new("OOps! I did it again", "Britney Spears")
     @song2 = Song.new("Toxic", "Britney Spears")
     @song3 = Song.new("Crazy", "Britney Spears")
@@ -83,8 +83,8 @@ class TestRoom < MiniTest::Test
 
   def test_play_fav_song
     @room1.add_song_to_playlist(@song1)
-    # @room1.add_song_to_playlist(@song2)
-    # @room1.add_song_to_playlist(@song3)
+    @room1.add_song_to_playlist(@song2)
+    @room1.add_song_to_playlist(@song3)
     @room1.add_guest_to_room(@guest1)
     assert_equal("Whoo!", @room1.play_fav_song(@guest1))
   end

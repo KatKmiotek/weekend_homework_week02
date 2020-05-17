@@ -50,8 +50,8 @@ end
 
 def play_fav_song(guest)
     if @playlist.include?(guest.favourite_song)
-    return "Whoo!"
     end
+    return "Whoo!"
 end
 
 
