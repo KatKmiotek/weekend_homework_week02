@@ -10,7 +10,9 @@ class TestGuest < MiniTest::Test
   end
 
 
-
+def test_pay_entrance_fee
+  assert_equal(8, @guest1.pay_entrance_fee)
+end
 
 
 

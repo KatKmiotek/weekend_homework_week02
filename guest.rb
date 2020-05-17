@@ -7,7 +7,9 @@ def initialize(name, wallet)
   @wallet = wallet
 end
 
-
+def pay_entrance_fee
+  @wallet - 2
+end
 
 
 

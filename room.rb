@@ -37,9 +37,14 @@ def money_in_till
   return till
 end
 
+def add_money_till(room)
+  @till += room.entrance_fee
+end
 
-
-
+def entrance_fees
+  @guest1.pay_entrance_fee
+  add_money_till(@room1)
+end
 
 
 end
